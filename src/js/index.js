@@ -5,4 +5,6 @@ const endpoint =
 
 const cities = []; // Empty array
 
-fetch(endpoint).then(blob => console.log(blob));
+fetch(endpoint)
+.then(blob => blob.json())
+.then(data => cities.push(...data))
